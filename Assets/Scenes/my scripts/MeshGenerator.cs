@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//help from https://www.raywenderlich.com/82-procedural-generation-of-mazes-with-unity
+
 public class MeshGenerator
 {    
     public float width;
