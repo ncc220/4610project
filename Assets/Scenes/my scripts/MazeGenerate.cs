@@ -129,6 +129,7 @@ private void DisplayMaze()
     go.transform.position = Vector3.zero;
     go.name = "Procedural Maze";
     go.tag = "Generated";
+    go.layer = 8;
 
     MeshFilter mf = go.AddComponent<MeshFilter>();
     mf.mesh = meshGen.FromData(data);

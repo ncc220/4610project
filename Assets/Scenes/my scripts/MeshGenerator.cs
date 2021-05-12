@@ -16,7 +16,7 @@ public class MeshGenerator
 public Mesh FromData(int[,] data)
 {
     Mesh maze = new Mesh();
-
+    
     
     List<Vector3> newVertices = new List<Vector3>();
     List<Vector2> newUVs = new List<Vector2>();
@@ -42,13 +42,14 @@ public Mesh FromData(int[,] data)
                     Quaternion.LookRotation(Vector3.up),
                     new Vector3(width, width, 1)
                 ), ref newVertices, ref newUVs, ref floorTriangles);
+                
 
                 
-                AddQuad(Matrix4x4.TRS(
-                    new Vector3(j * width, height, i * width),
-                    Quaternion.LookRotation(Vector3.down),
-                    new Vector3(width, width, 1)
-                ), ref newVertices, ref newUVs, ref floorTriangles);
+                // AddQuad(Matrix4x4.TRS(
+                //     new Vector3(j * width, height, i * width),
+                //     Quaternion.LookRotation(Vector3.down),
+                //     new Vector3(width, width, 1)
+                // ), ref newVertices, ref newUVs, ref floorTriangles);
 
 
                 
