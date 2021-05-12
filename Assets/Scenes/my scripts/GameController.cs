@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 using System;
 using UnityEngine.UI;
 
@@ -83,9 +85,12 @@ public class GameController : MonoBehaviour
         {
             timeLabel.text = "TIME UP";
             //send player to game over screen 
-            player.enabled = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+            Cursor.lockState = CursorLockMode.None; 
+            generator.DisposeOldMaze();
+            //player.enabled = false;
 
-            Invoke("StartNewGame", 4);
+            //Invoke("StartNewGame", 4);
         }
     }
 
