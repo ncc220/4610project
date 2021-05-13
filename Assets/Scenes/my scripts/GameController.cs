@@ -102,6 +102,8 @@ public class GameController : MonoBehaviour
 
         score += 1;
         scoreLabel.text = score.ToString();
+        currentHeight += 2;
+        currentWidth += 2;
 
         Destroy(trigger);
     }
